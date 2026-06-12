@@ -1,8 +1,8 @@
 import { describe, test, expect } from 'vitest'
 import { userObj } from '../main'
 
-describe('serObj method tests', () => {
-  // Перевірка наявності методу fullName у об'єкті userOb
+describe('userObj method tests', () => {
+  // Перевірка наявності методу fullName у об'єкті userObj
   test('userObj has fullName method', () => {
     expect(userObj).toHaveProperty('fullName')
     expect(typeof userObj.fullName).toBe('function')

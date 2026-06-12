@@ -14,7 +14,8 @@ describe('defUpperStr function tests', () => {
 
   // Перевірка на використання логічного оператора || і відсутність оператора if
   test('uses logical OR operator and does not use if statement', () => {
-    const functionAsString = defUpperStr.toString()
+    // Видаляємо коментарі, щоб уникнути крихкості тесту
+    const functionAsString = defUpperStr.toString().replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '')
     // Перевірка на присутність ||
     expect(functionAsString).toMatch(/\|\|/)
     // Перевірка на відсутність if
