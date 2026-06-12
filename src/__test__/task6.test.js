@@ -26,7 +26,8 @@ describe('ageClassification function tests', () => {
   })
 
   test('does not use if or switch statements', () => {
-    const functionAsString = ageClassification.toString()
+    // Видаляємо коментарі, щоб уникнути крихкості тесту
+    const functionAsString = ageClassification.toString().replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '')
     expect(functionAsString).not.toMatch(/\bif\b/)
     expect(functionAsString).not.toMatch(/\bswitch\b/)
   })
