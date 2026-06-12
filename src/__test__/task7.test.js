@@ -10,7 +10,7 @@ describe('oddFn function tests', () => {
 
   test('uses while loop', () => {
     // Видаляємо коментарі, щоб уникнути крихкості тесту
-    const functionAsString = oddFn.toString().replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '')
+    const functionAsString = oddFn.toString().replace(/\/\/.*|\/\*[\s\S]*?\*\//g, '')
     expect(functionAsString).toMatch(/\bwhile\b/)
   })
 })
